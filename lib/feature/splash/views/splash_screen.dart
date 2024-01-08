@@ -1,4 +1,4 @@
-import 'package:clean_mvc_template/core/constants/text_styles.dart';
+import 'package:clean_mvc_template/config/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -15,16 +15,43 @@ class SplashScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Gap(20),
-            const Text(
+            Text(
               "Splash Screen",
-              style: bodyMedium14,
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            const Gap(20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Toogle theme: ",
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                Switch.adaptive(
+                    value: ThemeManage.isDarkModeActive(),
+                    onChanged: (val) {
+                      ThemeManage.changeThemeMode();
+                    }),
+              ],
             ),
             const Gap(20),
             ElevatedButton(
               onPressed: () {
                 int result = 5 ~/ 0;
               },
-              child: const Text('Simulate Error'),
+              style: ButtonStyle(
+                backgroundColor: ThemeManage.isDarkModeActive()
+                    ? const MaterialStatePropertyAll(
+                        Colors.orange,
+                      )
+                    : const MaterialStatePropertyAll(
+                        Colors.white,
+                      ),
+              ),
+              child: Text(
+                'Simulate Error',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:clean_mvc_template/config/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomErrorScreen extends StatelessWidget {
@@ -19,9 +20,9 @@ class CustomErrorScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'An error occurred:',
-              style: TextStyle(fontSize: 18),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 10),
             Text(
@@ -33,7 +34,19 @@ class CustomErrorScreen extends StatelessWidget {
               onPressed: () {
                 exit(1);
               },
-              child: const Text('Close App'),
+              style: ButtonStyle(
+                backgroundColor: ThemeManage.isDarkModeActive()
+                    ? const MaterialStatePropertyAll(
+                        Colors.orange,
+                      )
+                    : const MaterialStatePropertyAll(
+                        Colors.white,
+                      ),
+              ),
+              child: Text(
+                'Close App',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
             ),
           ],
         ),

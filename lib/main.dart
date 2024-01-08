@@ -1,6 +1,7 @@
 import 'package:clean_mvc_template/config/routes/app_pages.dart';
 import 'package:clean_mvc_template/config/routes/app_routes.dart';
 import 'package:clean_mvc_template/config/theme/app_theme.dart';
+import 'package:clean_mvc_template/config/theme/theme_manager.dart';
 import 'package:clean_mvc_template/core/resource/dependency_injection.dart';
 import 'package:clean_mvc_template/core/resource/widgets/custom_error_widget.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,9 @@ class MyApp extends StatelessWidget {
         title: 'MyApp',
         navigatorKey: globalNavKey,
         debugShowCheckedModeBanner: false,
-        theme: CustomAppTheme(),
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: ThemeManage.getThemeMode(),
         initialBinding: DependencyInjection(),
         getPages: AppPages.pages,
         initialRoute: Routes.INITIAL,
