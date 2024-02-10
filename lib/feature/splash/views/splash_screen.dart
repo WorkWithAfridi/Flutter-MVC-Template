@@ -1,3 +1,4 @@
+import 'package:clean_mvc_template/core/resource/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -9,7 +10,10 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
+      body: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24,
+        ),
         width: double.maxFinite,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +57,14 @@ class SplashScreen extends StatelessWidget {
                 'Simulate Error',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
+            ),
+            CustomTextField(),
+            CustomTextField(
+              isDropDown: true,
+              dropDownOptions: const [
+                "Test 1",
+                "Test 2",
+              ],
             ),
           ],
         ),
