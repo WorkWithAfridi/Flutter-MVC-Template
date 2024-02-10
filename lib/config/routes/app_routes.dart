@@ -1,7 +1,8 @@
-import 'package:clean_mvc_template/config/routes/app_pages.dart';
-import 'package:clean_mvc_template/core/resource/widgets/no_internet.dart';
-import 'package:clean_mvc_template/feature/splash/views/splash_screen.dart';
 import 'package:get/get.dart';
+
+import '../../core/resource/widgets/no_internet.dart';
+import '../../feature/splash/views/splash_screen.dart';
+import 'app_pages.dart';
 
 abstract class AppPages {
   static final pages = [

@@ -1,6 +1,7 @@
-import 'package:clean_mvc_template/config/routes/app_pages.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
+
+import '../routes/app_pages.dart';
 
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();

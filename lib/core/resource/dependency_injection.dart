@@ -1,6 +1,7 @@
-import 'package:clean_mvc_template/config/network_service/network_controller.dart';
-import 'package:clean_mvc_template/config/network_service/network_service.dart';
 import 'package:get/get.dart';
+
+import '../../config/network_service/network_controller.dart';
+import '../../config/network_service/network_service.dart';
 
 class DependencyInjection extends Bindings {
   @override

@@ -1,9 +1,10 @@
 import 'dart:io';
 
-import 'package:clean_mvc_template/core/constants/api_endpoints.dart';
-import 'package:clean_mvc_template/core/helper/logger.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' hide FormData, Response;
+
+import '../../core/constants/api_endpoints.dart';
+import '../../core/helper/logger.dart';
 
 enum Method { POST, GET, PUT, DELETE, PATCH }
 

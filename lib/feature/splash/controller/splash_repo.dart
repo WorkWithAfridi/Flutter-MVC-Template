@@ -1,4 +1,4 @@
-import 'package:clean_mvc_template/feature/splash/controller/splash_controller.dart';
+import 'splash_controller.dart';
 
 extension SplashRepo on SplashController {
   // Future<void> demoGetCall({

@@ -1,6 +1,7 @@
-import 'package:clean_mvc_template/config/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+
+import '../../../config/theme/theme_manager.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

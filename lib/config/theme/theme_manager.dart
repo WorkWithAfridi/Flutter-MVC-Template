@@ -1,6 +1,7 @@
-import 'package:clean_mvc_template/core/resource/local_storage/local_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../core/resource/local_storage/local_storage.dart';
 
 class ThemeManage {
   static const _themeKey = "isDarkMode";
