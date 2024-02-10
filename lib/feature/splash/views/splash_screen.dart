@@ -1,8 +1,8 @@
-import 'package:clean_mvc_template/core/resource/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../../../config/theme/theme_manager.dart';
+import '../../../core/resource/widgets/custom_text_field.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
