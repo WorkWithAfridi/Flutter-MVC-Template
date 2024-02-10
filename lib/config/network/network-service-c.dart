@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../routes/app_pages.dart';
 
-class NetworkController extends GetxController {
+class NetworkService extends GetxController {
   final Connectivity _connectivity = Connectivity();
   bool isConnected = false;
   @override

@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
 
-import '../../config/network_service/network_controller.dart';
-import '../../config/network_service/network_service.dart';
+import '../../config/network/network-c.dart';
+import '../../config/network/network-service-c.dart';
 
 class DependencyInjection extends Bindings {
   @override
   void dependencies() {
     Get.put<NetworkController>(NetworkController(), permanent: true);
-    Get.put<HttpService>(HttpService(), permanent: true);
+    Get.put<NetworkService>(NetworkService(), permanent: true);
   }
 }
